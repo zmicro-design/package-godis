@@ -5,11 +5,12 @@ help() {
   echo "  zmicro godis <args ...>"
   echo ""
 
-  godis --help
+  # godis --help
 }
 
 version() {
-  godis --version
+  # godis --version
+  echo "v1.2.8"
 }
 
 core() {
