@@ -1,0 +1,41 @@
+#!/bin/bash
+
+help() {
+  echo "Usage:"
+  echo "  zmicro godis <args ...>"
+  echo ""
+
+  godis --help
+}
+
+version() {
+  godis --version
+}
+
+core() {
+  # context directory
+  local context="$ZMICRO_PACKAGES_DATA_PATH/godis"
+  if [ ! -d "$context" ]; then
+    mkdir -p $context
+  fi
+  cd $context
+  # context directory
+
+  case $1 in
+  -h | --help | help)
+    help
+    ;;
+  -v | --version | version)
+    version
+    ;;
+  *)
+    godis "$@"
+    ;;
+  esac
+}
+
+run() {
+  core "$@"
+}
+
+run "$@"

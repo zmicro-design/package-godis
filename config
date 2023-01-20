@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export PACKAGE_CORE_NAME="godis"
+export PACKAGE_CORE_BIN_NAME="$PACKAGE_CORE_NAME"
+export PACKAGE_CORE_VERSION=v1.2.8
+export PACKAGE_CORE_RELEASE_DOWNLOAD="https://github.com/HDT3213/godis/releases/download"
